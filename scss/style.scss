@@ -11,7 +11,7 @@ Primary style
 -------------------------------- */
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%
 }
 
 body {
@@ -34,9 +34,9 @@ a {
     letter-spacing: 1px;
     padding: 0 16px;
     height: 30px;
-    min-width: 150px;
     line-height: 30px;
-    margin: 8px 8px 0 0;
+    min-width: 100px;
+    margin-top: 8px;
     border-radius: 4px;
     border: 2px solid $color-1;
     color: $color-1;
@@ -47,19 +47,32 @@ a {
     display: inline-block;
     text-align: center;
     text-transform: uppercase;
-    font-family: "Roboto", sans-serif;
+    font-family: $secondary-font;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 1rem;
+    &:first-child {
+        margin-right: 10px;
+    }
     &:hover {
         background-color: darken($color-1, 10%);
         border-color: darken($color-1, 10%);
         color: $color-2;
     }
     @include MQ(M) {
-        padding: 0 26px;
+        padding: 0 20px;
         height: 40px;
         line-height: 40px;
+        min-width: 150px;
+        font-size: 1.2rem;
+    }
+    @include MQ(XL) {
+        padding: 0 70px;
+        height: 50px;
+        line-height: 50px;
+        &:first-child {
+            margin-right: 30px;
+        }
     }
 }
 
@@ -162,7 +175,21 @@ Main Components
             display: block;
         }
     }
-    @include MQ(L) {}
+    @include MQ(XL) {
+        hr {
+        width: 70px;
+        margin: 15px 0 40px 0;
+    }
+    h1 {
+        font-size: 5rem;
+        margin-bottom: 30px;
+    }
+    h2 {
+        font-size: 1.5rem;
+        margin: 10px 0 5px 0;
+    }
+    }
+
 }
 
 
@@ -221,6 +248,10 @@ Main Components
         width: 100px;
         height: 100px;
     }
+    @include MQ(XL) {
+        width: 170px;
+        height: 170px;
+    }
 }
 
 .ucommerce-logo {
@@ -237,5 +268,9 @@ Main Components
        display: block;
     }
 
+    @include MQ(XL) {
+        width: 150px;
+        height: 24px;
+    }
     
 }
