@@ -236,7 +236,7 @@ Main Components
 }
 
 
-/* SVG's */
+// SVG
 
 .logo {
     width: 60px;
@@ -273,4 +273,27 @@ Main Components
         height: 24px;
     }
     
+}
+
+// Marketing banner
+
+.marketing-banner {
+        display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: block;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height: 80px;
+    background: #140b06;
+    transition: -webkit-transform .5s cubic-bezier(.694,.0482,.335,1);
+    transition: transform .5s cubic-bezier(.694,.0482,.335,1);
+    transition: transform .5s cubic-bezier(.694,.0482,.335,1),-webkit-transform .5s cubic-bezier(.694,.0482,.335,1);
 }
